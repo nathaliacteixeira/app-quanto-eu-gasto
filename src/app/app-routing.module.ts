@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'adicionar',
     loadChildren: () => import('./gastos/adicionar/adicionar.module').then( m => m.AdicionarPageModule)
+  },
+  {
+    path: 'interna',
+    loadChildren: () => import('./gastos/interna/interna.module').then( m => m.InternaPageModule)
   }
 ];
 @NgModule({

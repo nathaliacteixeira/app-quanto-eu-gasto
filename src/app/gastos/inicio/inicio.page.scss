@@ -1,0 +1,22 @@
+ion-content{
+    --background: url(../assets/header.svg) no-repeat center top;
+}
+ion-card{
+    ion-card-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #7567E5;
+        color: #fff;
+        font-size: 14px;
+        h3{
+            font-weight: bold;
+            font-size: 16px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}
