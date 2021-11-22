@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Gasto } from '../gastos.model';
-import { GastosService } from '../gastos.service';
 
 @Component({
   selector: 'app-inicio',
@@ -9,13 +7,7 @@ import { GastosService } from '../gastos.service';
 })
 export class InicioPage implements OnInit {
 
-  gastos: Gasto[];
-
-  constructor(
-    private gastosService: GastosService
-  ) {
-    this.gastos = this.gastosService.getGastos();
-  }
+  constructor() { }
 
   ngOnInit() {
   }
