@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriaGasto, Gasto, MetodoPagamento } from '../gastos.model';
+import { CategoriaGasto, Gasto, MetodoPagamento, Mes } from '../gastos.model';
 
 @Component({
   selector: 'app-inicio',
@@ -18,6 +18,7 @@ export class InicioPage implements OnInit {
         metod_pag: MetodoPagamento.CARTAOCRED,
         valor: 99.0,
         data: new Date(2021,11,11),
+        mes: Mes.JANEIRO,
       },
       {
         nome: CategoriaGasto.MERCADO,
@@ -25,6 +26,7 @@ export class InicioPage implements OnInit {
         metod_pag: MetodoPagamento.DINHEIRO,
         valor: 100.0,
         data: new Date(2021,11,11), 
+        mes: Mes.FEVEREIRO,
       },
       {
         nome: CategoriaGasto.PAGAMENTO,
@@ -32,8 +34,9 @@ export class InicioPage implements OnInit {
         metod_pag: MetodoPagamento.CARTAODEB,
         valor: 50.0,
         data: new Date(2021,11,11), 
-      }
-    ]
+        mes: Mes.MARCO,
+      },
+    ];
   }
 
   ngOnInit() {}

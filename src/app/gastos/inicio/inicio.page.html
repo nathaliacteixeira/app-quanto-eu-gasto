@@ -1,16 +1,16 @@
-<ion-content>
-  <ion-card>
-    
+
+<ion-content><br><br><br><br><br>
+  <ion-card *ngFor="let gasto of gastos">    
     <ion-card-content>
       <div class="pt-1">
-        <h3>Abril</h3>
+        <h3>{{gasto.mes}}</h3>
         <img src="../assets/Component 5.png">
       </div>
       <div class="pt-2">
         <ion-button size="small" color="secondary" href="/interna">
           <ion-icon slot="icon-only" name="eye"></ion-icon>
         </ion-button>
-        <ion-label>-599,98</ion-label>
+        <ion-label>{{gasto.valor}}</ion-label>
       </div>
     </ion-card-content>
   </ion-card>
