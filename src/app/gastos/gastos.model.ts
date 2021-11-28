@@ -1,6 +1,6 @@
 export interface Gasto {
-    nome: string;
-    categoria: CategoriaGasto; 
+    id: number;
+    nome: CategoriaGasto; 
     icon: string;
     metod_pag: MetodoPagamento;
     valor: number;
@@ -18,8 +18,8 @@ export enum CategoriaGasto{
 }
 
 export enum MetodoPagamento{
-    CARTAOCRED = 'Cartao de Credito',
-    CARTAODEB  = 'Cartao de Debito',
+    CARTAOCRED = 'Cartão de Crédito',
+    CARTAODEB  = 'Cartao de Débito',
     DINHEIRO   = 'Dinheiro',
 }
 
