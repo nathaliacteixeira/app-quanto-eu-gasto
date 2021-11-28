@@ -1,5 +1,6 @@
 export interface Gasto {
-    nome: CategoriaGasto; 
+    nome: string;
+    categoria: CategoriaGasto; 
     icon: string;
     metod_pag: MetodoPagamento;
     valor: number;

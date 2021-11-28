@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 import { CategoriaGasto, Gasto, MetodoPagamento, Mes } from '../gastos.model';
+import { GastosService } from '../gastos.service';
 
 @Component({
   selector: 'app-inicio',
@@ -10,35 +12,32 @@ export class InicioPage implements OnInit {
 
   gastos: Gasto[];
 
-  constructor() { 
-    this.gastos = [
-      {
-        nome: CategoriaGasto.LAZER,
-        icon: 'icon',
-        metod_pag: MetodoPagamento.CARTAOCRED,
-        valor: 99.0,
-        data: new Date(2021,11,11),
-        mes: Mes.JANEIRO,
-      },
-      {
-        nome: CategoriaGasto.MERCADO,
-        icon: 'icon',
-        metod_pag: MetodoPagamento.DINHEIRO,
-        valor: 100.0,
-        data: new Date(2021,11,11), 
-        mes: Mes.FEVEREIRO,
-      },
-      {
-        nome: CategoriaGasto.PAGAMENTO,
-        icon: 'icon',
-        metod_pag: MetodoPagamento.CARTAODEB,
-        valor: 50.0,
-        data: new Date(2021,11,11), 
-        mes: Mes.MARCO,
-      },
-    ];
+  constructor(
+    private alertController: AlertController,
+    private gastosService: GastosService
+  ) {
+    this.gastos = this.gastosService.getGastos();
   }
-
+  
   ngOnInit() {}
 
+  excluir(gasto: Gasto){
+    this.alertController.create({
+      header: 'Remover',
+      message: `Você deseja remover o gasto ${gasto.nome}?`,
+      buttons: [
+        {
+          text: 'Sim',
+          handler: () => {
+            this.gastosService.remove(gasto.nome);
+            this.gastos = this.gastosService.getGastos();
+          },
+        },
+        {
+          text: 'Não',
+        },
+      ],
+    })
+    .then((alert) => alert.present());
+  }
 }

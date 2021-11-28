@@ -10,8 +10,14 @@
         <ion-button size="small" color="secondary" href="/interna">
           <ion-icon slot="icon-only" name="eye"></ion-icon>
         </ion-button>
-        <ion-label>{{gasto.valor | currency : 'R$ '}}</ion-label>
+        <ion-label>{{gasto.valor | currency: 'R$ '}}</ion-label>
       </div>
     </ion-card-content>
+  <ion-card-content>
+    <ion-item-option (click)="excluir(gasto)">
+      <ion-icon size="small" name="trash"></ion-icon>
+    </ion-item-option>
+  </ion-card-content>
   </ion-card>
+
 </ion-content>
