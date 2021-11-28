@@ -1,6 +1,12 @@
 ion-content{
     --background: url(../assets/header.svg) no-repeat center top;
     background-color:#fff;
+    .titulo{
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 18px;
+        text-align: center;
+    }
 }
 ion-card{
     height: 85px;
@@ -21,7 +27,7 @@ ion-card{
         font-family: 'Poppins', sans-serif;
         h3{
             font-weight: 600;
-            font-size: 16px;
+            font-size: 14px;
         }
         div{
             display: flex;
