@@ -1,4 +1,3 @@
-
 <ion-content><br><br><br><br><br>
   <ion-button size="small" fill="clear" href="inicio">
     <ion-icon name="arrow-back"></ion-icon>
@@ -12,7 +11,7 @@
       </div>
       <div class="pt-2">
         <div class="opcoes">
-          <ion-item-option (click)="excluir(gasto)" class="edit">
+          <ion-item-option class="edit" [routerLink]="['/adicionar', gasto.id]">
             <ion-icon size="small" name="create"></ion-icon>
           </ion-item-option>
           <ion-item-option (click)="excluir(gasto)">
