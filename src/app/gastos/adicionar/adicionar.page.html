@@ -11,10 +11,7 @@
             <ion-select-option value="COMBUSTIVEL">Combustivel</ion-select-option>
         </ion-select>
     </ion-item>
-    <ion-item>
-        <ion-label position="stacked">Icon: </ion-label>
-        <ion-input type="url" formControlName="icon"></ion-input>
-    </ion-item>
+    
     <ion-item>
         <ion-label position="stacked">Método de Pagamento: </ion-label>
         <ion-select formControlName="metod_pag">
@@ -31,6 +28,7 @@
         <ion-label position="stacked">Data: </ion-label>
         <ion-input type="date" formControlName="data"></ion-input>
     </ion-item>
+    
     <ion-item>
         <ion-label position="stacked">Mês: </ion-label>
         <ion-select formControlName="mes">
@@ -48,6 +46,9 @@
             <ion-select-option value="DEZEMBRO">Dezembro</ion-select-option>
         </ion-select>
     </ion-item>
+    <ion-button size="small" fill="clear" href="interna-gasto-mes">
+        <ion-icon name="arrow-back"></ion-icon>Cancelar
+    </ion-button>
     <ion-fab vertical="bottom" horizontal="end">
         <ion-fab-button (click)="salvar()" [disabled]="!form.valid">
           <ion-icon name="checkmark-outline"></ion-icon>

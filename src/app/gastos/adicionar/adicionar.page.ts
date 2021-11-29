@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'; 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GastosService } from '../gastos.service';
 
 @Component({
@@ -14,22 +14,32 @@ export class AdicionarPage implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private gastosService: GastosService,
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit() {
     this.form = this.formBuilder.group({
+      id:[''],
       nome: ['MERCADO', Validators.required],
-      icon: ['', Validators.required],
-      metod_pag: ['DINHEIRO'],
+      metod_pag: ['Dinheiro'],
       valor: ['', Validators.required],
       data: ['', Validators.required],
       mes: ['JANEIRO', Validators.required],
     });
+
+    const id = +this.activatedRoute.snapshot.params.id;
+    const gasto = this.gastosService.findById(id);
+    if(gasto){
+      this.form.patchValue({
+        ...gasto,
+        data: gasto.data && gasto.data.toISOString()
+      });
+    }
   }
 
   salvar() {
     this.gastosService.save(this.form.value);
-    this.router.navigate(['inicio']);
-  }
+    this.router.navigate(['interna-gasto-mes']);
+  } 
 }

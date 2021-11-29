@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { Gasto } from '../gastos.model';
+import { Gasto, Mes } from '../gastos.model';
 import { GastosService } from '../gastos.service';
 
 @Component({
