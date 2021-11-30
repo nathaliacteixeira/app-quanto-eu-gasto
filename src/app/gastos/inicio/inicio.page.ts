@@ -23,7 +23,7 @@ export class InicioPage implements OnInit {
   excluir(gasto: Gasto){
     this.alertController.create({
       header: 'Remover',
-      message: `Você deseja remover o gasto ${gasto.nome}?`,
+      message: `Você deseja remover o gasto <strong> ${gasto.nome}</strong> ?`,
       buttons: [
         {
           text: 'Sim',
