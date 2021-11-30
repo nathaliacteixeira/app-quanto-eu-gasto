@@ -25,7 +25,7 @@ export class AdicionarPage implements OnInit {
       metod_pag: ['Cartão de Crédito',Validators.required],
       valor: [0.1, Validators.required],
       data: ['', Validators.required],
-      mes: ['Janeiro', Validators.required],
+      mes: ['Novembro', Validators.required],
     });
 
     const id = +this.activatedRoute.snapshot.params.id;
