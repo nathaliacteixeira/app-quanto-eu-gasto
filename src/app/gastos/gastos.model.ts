@@ -1,25 +1,21 @@
 export interface Gasto {
     id: number;
-    categoria: Categoria;
+    nome: CategoriaGasto;
     metod_pag: MetodoPagamento;
     valor: number;
     data: Date;
     mes: Mes;
 }
 
-export interface Categoria {
-    id: number;
-    nome: string;
-}
 
-/*export enum CategoriaGasto{
+export enum CategoriaGasto{
     MERCADO     = 'Mercado',
     LAZER       = 'Lazer',
     PAGAMENTO   = 'Pagamento',
     COMIDA      = 'Comida',
     ROUPAS      = 'Roupas',
     COMBUSTIVEL = 'Combustivel',
-}*/
+}
 
 export enum MetodoPagamento{
     CARTAOCRED = 'Cartão de Crédito',

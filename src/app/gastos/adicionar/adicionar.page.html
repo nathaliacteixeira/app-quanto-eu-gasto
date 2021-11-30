@@ -1,8 +1,5 @@
 <ion-header>
     <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button defaultHref="inicio" color="primary"></ion-back-button>
-        </ion-buttons>
         <ion-title color="primary">Adicionar Gasto</ion-title>
       </ion-toolbar> 
   </ion-header>
@@ -34,7 +31,7 @@
     </ion-item>
     <ion-item>
         <ion-label position="stacked">Data: </ion-label>
-        <ion-input type="date" formControlName="data"></ion-input>
+        <ion-datetime displayFormat="DD/MM/YY" formControlName="data"></ion-datetime>
     </ion-item>
     
     <ion-item>

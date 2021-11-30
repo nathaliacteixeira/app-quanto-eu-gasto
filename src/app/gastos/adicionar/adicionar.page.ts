@@ -21,11 +21,11 @@ export class AdicionarPage implements OnInit {
   ngOnInit() {
     this.form = this.formBuilder.group({
       id:[''],
-      nome: ['MERCADO', Validators.required],
+      nome: ['Mercado', Validators.required],
       metod_pag: ['Dinheiro'],
-      valor: ['', Validators.required],
+      valor: [0.1, Validators.required],
       data: ['', Validators.required],
-      mes: ['JANEIRO', Validators.required],
+      mes: ['Janeiro', Validators.required],
     });
 
     const id = +this.activatedRoute.snapshot.params.id;
@@ -33,13 +33,13 @@ export class AdicionarPage implements OnInit {
     if(gasto){
       this.form.patchValue({
         ...gasto,
-        data: gasto.data && gasto.data.toISOString()
+        data: gasto.data && gasto.data
       });
     }
   }
 
   salvar() {
     this.gastosService.save(this.form.value);
-    this.router.navigate(['interna-gasto-mes']);
+    this.router.navigate(['inicio']);
   } 
 }
