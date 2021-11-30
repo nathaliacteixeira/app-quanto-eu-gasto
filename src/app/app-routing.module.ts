@@ -7,10 +7,6 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'historico',
-    loadChildren: () => import('./gastos/historico/historico.module').then( m => m.HistoricoPageModule)
-  },
-  {
     path: 'inicio',
     loadChildren: () => import('./gastos/inicio/inicio.module').then( m => m.InicioPageModule)
   },
@@ -21,7 +17,12 @@ const routes: Routes = [
   {
     path: 'interna-gasto-mes',
     loadChildren: () => import('./gastos/interna-gasto-mes/interna-gasto-mes.module').then( m => m.InternaGastoMesPageModule)
+  },
+  {
+    path: 'adicionar-categoria',
+    loadChildren: () => import('./gastos/adicionar-categoria/adicionar-categoria.module').then( m => m.AdicionarCategoriaPageModule)
   }
+
 
 ];
 @NgModule({

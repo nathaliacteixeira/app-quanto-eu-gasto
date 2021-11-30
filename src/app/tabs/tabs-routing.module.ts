@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'historico',
-        loadChildren: () => import('../gastos/historico/historico.module').then(m => m.HistoricoPageModule)
+        loadChildren: () => import('../gastos/adicionar-categoria/adicionar-categoria.module').then(m => m.AdicionarCategoriaPageModule)
       },
       {
         path: 'inicio',
