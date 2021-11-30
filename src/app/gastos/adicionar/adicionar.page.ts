@@ -22,7 +22,7 @@ export class AdicionarPage implements OnInit {
     this.form = this.formBuilder.group({
       id:[''],
       nome: ['Mercado', Validators.required],
-      metod_pag: ['Dinheiro'],
+      metod_pag: ['Cartão de Crédito'],
       valor: [0.1, Validators.required],
       data: ['', Validators.required],
       mes: ['Janeiro', Validators.required],
