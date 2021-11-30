@@ -21,7 +21,7 @@ export class AdicionarPage implements OnInit {
   ngOnInit() {
     this.form = this.formBuilder.group({
       id:[''],
-      nome: ['Mercado', Validators.required],
+      nome: ['', Validators.required],
       metod_pag: ['Cartão de Crédito',Validators.required],
       valor: [0.1, Validators.required],
       data: ['', Validators.required],

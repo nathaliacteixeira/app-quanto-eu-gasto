@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { CategoriaGasto, Gasto, MetodoPagamento, Mes } from '../gastos.model';
+import { Gasto, MetodoPagamento, Mes } from '../gastos.model';
 import { GastosService } from '../gastos.service';
 
 @Component({

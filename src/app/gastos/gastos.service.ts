@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CategoriaGasto, Gasto, Mes, MetodoPagamento } from './gastos.model';
+import { Gasto, Mes, MetodoPagamento } from './gastos.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class GastosService {
     this.gastos = [
       {
         id: 1,
-        nome: CategoriaGasto.MERCADO,
+        nome: 'Mercado',
         metod_pag: MetodoPagamento.CARTAOCRED,
         valor: 251,
         data: new Date(2021,9,19),
@@ -21,7 +21,7 @@ export class GastosService {
       },
       {
         id: 2,
-        nome: CategoriaGasto.ROUPAS,
+        nome: 'Lazer',
         metod_pag: MetodoPagamento.DINHEIRO,
         valor: 152.99,
         data: new Date(2021,11,11),
@@ -29,7 +29,7 @@ export class GastosService {
       },
       {
         id: 3,
-        nome: CategoriaGasto.LAZER,
+        nome: 'Roupas',
         metod_pag: MetodoPagamento.DINHEIRO,
         valor: 57.90,
         data: new Date(2021,11,19),
@@ -37,7 +37,7 @@ export class GastosService {
       },
       {
         id: 4,
-        nome: CategoriaGasto.PAGAMENTO,
+        nome: 'Presentes',
         metod_pag: MetodoPagamento.DINHEIRO,
         valor: 125.90,
         data: new Date(2021,5,19),
