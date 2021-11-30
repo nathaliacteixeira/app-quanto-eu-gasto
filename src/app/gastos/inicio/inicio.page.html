@@ -2,7 +2,7 @@
   <ion-card *ngFor="let gasto of gastos">  
     <ion-card-content>
       <div class="pt-1">
-        <small>{{gasto.data | date: 'dd/MM/yyyy'}}</small>
+        <small>{{gasto.data | date: 'dd/MM/yyyy'}} | {{gasto.mes}}</small>
         <h3>{{gasto.nome}}</h3>
         <span>{{gasto.metod_pag}}</span>
       </div>
