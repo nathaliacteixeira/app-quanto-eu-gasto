@@ -13,14 +13,6 @@ const routes: Routes = [
   {
     path: 'adicionar',
     loadChildren: () => import('./gastos/adicionar/adicionar.module').then( m => m.AdicionarPageModule)
-  },
-  {
-    path: 'interna-gasto-mes',
-    loadChildren: () => import('./gastos/interna-gasto-mes/interna-gasto-mes.module').then( m => m.InternaGastoMesPageModule)
-  },
-  {
-    path: 'adicionar-categoria',
-    loadChildren: () => import('./gastos/adicionar-categoria/adicionar-categoria.module').then( m => m.AdicionarCategoriaPageModule)
   }
 
 

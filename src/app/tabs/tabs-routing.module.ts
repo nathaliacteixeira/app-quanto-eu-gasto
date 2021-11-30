@@ -7,10 +7,7 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPage,
     children: [
-      {
-        path: 'historico',
-        loadChildren: () => import('../gastos/adicionar-categoria/adicionar-categoria.module').then(m => m.AdicionarCategoriaPageModule)
-      },
+      
       {
         path: 'inicio',
         loadChildren: () => import('../gastos/inicio/inicio.module').then(m => m.InicioPageModule)
