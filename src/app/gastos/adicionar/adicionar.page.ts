@@ -40,6 +40,6 @@ export class AdicionarPage implements OnInit {
 
   salvar() {
     this.gastosService.save(this.form.value);
-    this.router.navigate(['inicio']);
+    this.router.navigate(['/tabs/inicio']);
   } 
 }
